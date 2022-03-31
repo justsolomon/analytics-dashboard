@@ -5,7 +5,6 @@ export interface ButtonProps
   variant?: 'solid' | 'ghost' | 'transparent';
   colorScheme?: 'primary' | 'secondary' | 'none';
   iconButton?: boolean;
-  leftIcon?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -14,8 +13,6 @@ function Button({
   variant = 'solid',
   colorScheme = 'none',
   iconButton,
-  leftIcon,
-  onClick,
   ...rest
 }: ButtonProps) {
   return (
@@ -25,13 +22,9 @@ function Button({
       } ${styles['button--' + colorScheme]} ${
         iconButton ? styles['button--icon'] : ''
       }`}
-      onClick={onClick}
       {...rest}
     >
-      {leftIcon ? (
-        <span className={styles['button__left-icon']}>{leftIcon}</span>
-      ) : null}
-      <>{children}</>
+      {children}
     </button>
   );
 }
