@@ -1,1 +1,1 @@
-# React App Template
+# analytics-dashboard
