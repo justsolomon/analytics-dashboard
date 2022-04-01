@@ -14,9 +14,8 @@ const NavLinkMenu = ({ title, icon, links }: NavLinkMenuProps) => {
     );
 
     if (hasActiveLink > -1) setIsOpen(true);
-  }, []);
+  }, [links]);
 
-  console.log(styles);
   return (
     <div
       className={`${styles['nav-link-menu']} ${
