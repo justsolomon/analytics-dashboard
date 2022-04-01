@@ -37,3 +37,11 @@
   bottom: $bottom;
   left: $left;
 }
+
+@mixin layout-main {
+  margin-left: 20%;
+
+  @media #{$media-desktop-sm} {
+    margin-left: 30%;
+  }
+}

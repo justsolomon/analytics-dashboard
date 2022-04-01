@@ -1,0 +1,49 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.input {
+  &-group {
+    @include position();
+  }
+
+  height: 44px;
+  width: 100%;
+  padding: 0 16px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius--md;
+  font-size: $font-size--base;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  &--has-left {
+    padding-left: 48px;
+  }
+
+  &--has-right {
+    padding-right: 48px;
+  }
+
+  &__left-icon,
+  &__right-icon {
+    @include position(absolute, 14px);
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &__left-icon {
+    left: 16px;
+  }
+
+  &__right-icon {
+    right: 16px;
+  }
+}

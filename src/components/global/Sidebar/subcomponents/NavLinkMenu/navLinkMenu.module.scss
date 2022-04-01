@@ -14,7 +14,7 @@
       color: $purple;
     }
 
-    span {
+    span:first-child {
       @include flex-center();
 
       svg {
