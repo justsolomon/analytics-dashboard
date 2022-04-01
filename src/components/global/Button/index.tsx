@@ -7,8 +7,6 @@ export interface ButtonProps
   children: React.ReactNode;
 }
 
-console.log(styles);
-
 const Button = ({
   children,
   variant = 'solid',

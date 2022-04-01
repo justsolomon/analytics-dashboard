@@ -4,14 +4,14 @@
 .button {
   @include flex-center();
 
-  height: 40px;
+  height: 44px;
   padding: 0 16px;
   border: none;
-  cursor: pointer;
-  color: $primary-color;
+  color: $white;
   font-size: $font-size--base;
-  font-weight: $font-weight--bold;
+  font-weight: $font-weight--medium;
   border-radius: $border-radius--sm;
+  cursor: pointer;
 
   &:focus-visible {
     outline: none;
@@ -39,8 +39,9 @@
   }
 
   &--transparent {
-    background-color: transparent;
     padding: 0;
+    color: $primary-color;
+    background-color: transparent;
 
     &:disabled:hover {
       background-color: transparent;
@@ -50,5 +51,9 @@
   &--icon {
     padding: 0 10px;
     height: 32px;
+  }
+
+  &--default {
+    width: 105px;
   }
 }

@@ -2,20 +2,7 @@
 @import 'styles/mixins';
 
 .input {
-  &-group {
-    @include position();
-  }
-
-  height: 44px;
-  width: 100%;
-  padding: 0 16px;
-  border: 1px solid $border-color;
-  border-radius: $border-radius--md;
-  font-size: $font-size--base;
-
-  &:focus {
-    outline: none;
-  }
+  @include input();
 
   &::placeholder {
     color: $secondary-color;
