@@ -1,0 +1,78 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.header {
+  @include layout-main();
+  @include flex(row, center, space-between);
+
+  height: 80px;
+  padding: 0 40px;
+  border-bottom: 1px solid $border-color;
+
+  &__input {
+    input {
+      height: 54px;
+      width: 440px;
+      border: none;
+      border-radius: $border-radius--lg;
+      background-color: $header-input-bg;
+    }
+
+    span {
+      top: 17px;
+      color: $secondary-color;
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  &__menu {
+    @include flex(row, center, space-between);
+
+    height: 54px;
+    width: 175px;
+    padding: 0 20px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--md;
+
+    &__section {
+      @include flex-center();
+
+      span {
+        display: inline-block;
+
+        svg {
+          @include size(16px);
+        }
+      }
+
+      &:first-child span {
+        @include size(16px);
+        @include flex(row, center, center);
+
+        margin-left: 8px;
+        font-size: $font-size--xs;
+        border-radius: $border-radius--sm;
+        color: $white;
+        background-color: $error-color;
+      }
+
+      &:last-child span {
+        @include size(32px);
+
+        margin-right: 12px;
+        border: 1px solid $purple;
+        border-radius: 50%;
+      }
+    }
+
+    &__divider {
+      height: 24px;
+      width: 1px;
+      background-color: $border-color;
+    }
+  }
+}

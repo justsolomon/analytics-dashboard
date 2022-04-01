@@ -1,0 +1,36 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.input {
+  @include input();
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  &--has-left {
+    padding-left: 48px;
+  }
+
+  &--has-right {
+    padding-right: 48px;
+  }
+
+  &__left-icon,
+  &__right-icon {
+    @include position(absolute, 14px);
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &__left-icon {
+    left: 16px;
+  }
+
+  &__right-icon {
+    right: 16px;
+  }
+}

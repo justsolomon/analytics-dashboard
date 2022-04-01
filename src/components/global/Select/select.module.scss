@@ -1,0 +1,17 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.select {
+  @include input();
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &__icon {
+    svg {
+      @include size(16px);
+      @include position(absolute, 14px, 18px);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.nav-link-menu {
+  margin-bottom: 24px;
+
+  &__button {
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    font-weight: $font-weight--normal;
+
+    &:hover {
+      color: $purple;
+    }
+
+    span:first-child {
+      @include flex-center();
+
+      svg {
+        height: 16px;
+        width: 16px;
+        margin-right: 20px;
+      }
+    }
+
+    &__dropdown-icon svg {
+      transition: all 0.3s;
+    }
+  }
+
+  &--open &__button {
+    color: $purple;
+    font-weight: $font-weight--medium;
+
+    &__dropdown-icon svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__links {
+    @include flex(column);
+
+    margin: 16px 0 0 36px;
+  }
+}

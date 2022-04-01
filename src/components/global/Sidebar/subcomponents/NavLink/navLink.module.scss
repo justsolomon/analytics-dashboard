@@ -1,0 +1,13 @@
+@import 'styles/variables';
+
+.nav-link {
+  margin-bottom: 16px;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover,
+  &--active {
+    color: $text-black;
+    font-weight: $font-weight--medium;
+  }
+}
