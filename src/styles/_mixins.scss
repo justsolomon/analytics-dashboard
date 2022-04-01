@@ -4,3 +4,36 @@
   display: flex;
   align-items: center;
 }
+
+@mixin flex(
+  $direction: row,
+  $align: flex-start,
+  $justify: flex-start,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+@mixin grid($columns: 1, $gap: 16px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin position(
+  $position: relative,
+  $top: unset,
+  $right: unset,
+  $bottom: unset,
+  $left: unset
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

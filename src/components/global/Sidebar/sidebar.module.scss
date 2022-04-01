@@ -1,0 +1,33 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.sidebar {
+  @include position(fixed);
+
+  width: 30%;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid $border-color;
+
+  &__user-info {
+    @include flex(column, flex-start, center);
+
+    height: 60px;
+    padding-left: 55px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius--md;
+
+    h2 {
+      color: $text-black;
+      font-size: $font-size--sm;
+    }
+
+    p {
+      font-size: $font-size--xs;
+    }
+  }
+
+  &__nav {
+    margin-top: 32px;
+  }
+}

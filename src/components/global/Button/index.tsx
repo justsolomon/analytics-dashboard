@@ -2,31 +2,29 @@ import styles from './button.module.scss';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'solid' | 'ghost' | 'transparent';
-  colorScheme?: 'primary' | 'secondary' | 'none';
+  variant?: 'solid' | 'transparent';
   iconButton?: boolean;
   children: React.ReactNode;
 }
 
-function Button({
+console.log(styles);
+
+const Button = ({
   children,
   variant = 'solid',
-  colorScheme = 'none',
   iconButton,
   ...rest
-}: ButtonProps) {
+}: ButtonProps) => {
   return (
     <button
+      {...rest}
       className={`${styles['button']} ${rest.className} ${
         styles['button--' + variant]
-      } ${styles['button--' + colorScheme]} ${
-        iconButton ? styles['button--icon'] : ''
-      }`}
-      {...rest}
+      } ${iconButton ? styles['button--icon'] : ''}`}
     >
       {children}
     </button>
   );
-}
+};
 
 export default Button;

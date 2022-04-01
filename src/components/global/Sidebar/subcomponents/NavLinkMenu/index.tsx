@@ -16,6 +16,7 @@ const NavLinkMenu = ({ title, icon, links }: NavLinkMenuProps) => {
     if (hasActiveLink > -1) setIsOpen(true);
   }, []);
 
+  console.log(styles);
   return (
     <div
       className={`${styles['nav-link-menu']} ${
@@ -24,13 +25,17 @@ const NavLinkMenu = ({ title, icon, links }: NavLinkMenuProps) => {
     >
       <Button
         className={styles['nav-link-menu__button']}
+        variant="transparent"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>
           {icon}
           {title}
         </span>
-        <ArrowLeftIcon />
+
+        <span className={styles['nav-link-menu__button__dropdown-icon']}>
+          <ArrowLeftIcon />
+        </span>
       </Button>
 
       {isOpen ? (

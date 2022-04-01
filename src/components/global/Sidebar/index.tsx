@@ -5,9 +5,16 @@ import NavLinkMenu from './subcomponents/NavLinkMenu';
 const Sidebar = () => {
   return (
     <aside className={styles['sidebar']}>
-      {navLinkMenus.map((navLinkMenu, index) => (
-        <NavLinkMenu {...navLinkMenu} key={index} />
-      ))}
+      <div className={styles['sidebar__user-info']}>
+        <h2>Metacare</h2>
+        <p>adeyinka@metacare.app</p>
+      </div>
+
+      <nav className={styles['sidebar__nav']}>
+        {navLinkMenus.map((navLinkMenu, index) => (
+          <NavLinkMenu {...navLinkMenu} key={index} />
+        ))}
+      </nav>
     </aside>
   );
 };

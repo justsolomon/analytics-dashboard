@@ -8,8 +8,8 @@
   padding: 0 16px;
   border: none;
   cursor: pointer;
-  color: #fff;
-  font-size: $font-size--md;
+  color: $primary-color;
+  font-size: $font-size--base;
   font-weight: $font-weight--bold;
   border-radius: $border-radius--sm;
 
@@ -22,8 +22,7 @@
     opacity: 0.7;
   }
 
-  &--solid,
-  &--primary {
+  &--solid {
     background-color: $brand-color--primary;
 
     &:hover {
@@ -39,57 +38,17 @@
     }
   }
 
-  &--secondary {
-    background-color: $bg-light--primary;
-    color: $primary-color;
-
-    &:hover {
-      background-color: $bg-light--secondary;
-    }
-
-    &:active {
-      background-color: $bg-light--tertiary;
-    }
-
-    &:disabled:hover {
-      background-color: $bg-light--primary;
-    }
-  }
-
-  &--ghost,
   &--transparent {
     background-color: transparent;
+    padding: 0;
 
     &:disabled:hover {
       background-color: transparent;
     }
   }
 
-  &--ghost {
-    &:hover {
-      background-color: $bg-light--primary;
-    }
-
-    &:active {
-      background-color: $bg-light--secondary;
-    }
-  }
-
-  &--loading {
-    min-width: 180px;
-  }
-
   &--icon {
     padding: 0 10px;
     height: 32px;
-  }
-
-  &__left-icon {
-    margin: 3px 8px 0 0;
-
-    svg {
-      height: 16px;
-      width: 16px;
-    }
   }
 }

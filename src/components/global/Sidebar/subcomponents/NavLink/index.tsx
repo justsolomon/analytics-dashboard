@@ -6,9 +6,7 @@ const NavLink = ({ title, to }: NavLinkProps) => {
     <a
       href={to}
       className={`${styles['nav-link']} ${
-        window.location.href.replace(window.location.origin, '') === to
-          ? styles['nav-link__active']
-          : ''
+        window.location.pathname === to ? styles['nav-link--active'] : ''
       }`}
     >
       {title}
