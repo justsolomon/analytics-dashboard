@@ -50,8 +50,8 @@
     margin-left: 25%;
   }
 
-  @media #{$media-desktop-sm} {
-    margin-left: 30%;
+  @media #{$media-desktop--xs} {
+    margin-left: 0;
   }
 }
 
@@ -62,6 +62,7 @@
   border: 1px solid $input-border-color;
   border-radius: $border-radius--md;
   color: $text-black;
+  font-family: $font-family;
   font-size: $font-size--base;
   font-weight: $font-weight--medium;
 

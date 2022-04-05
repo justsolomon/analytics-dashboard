@@ -2,7 +2,7 @@
 @import 'styles/mixins';
 
 .button {
-  @include flex-center();
+  @include flex(row, center, center);
 
   height: 44px;
   padding: 0 16px;
@@ -10,7 +10,7 @@
   color: $white;
   font-size: $font-size--base;
   font-weight: $font-weight--medium;
-  border-radius: $border-radius--sm;
+  border-radius: $border-radius--md;
   cursor: pointer;
 
   &:focus-visible {
@@ -38,6 +38,7 @@
     }
   }
 
+  &--icon,
   &--transparent {
     padding: 0;
     color: $primary-color;
@@ -46,11 +47,18 @@
     &:disabled:hover {
       background-color: transparent;
     }
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   &--icon {
-    padding: 0 10px;
-    height: 32px;
+    @include size(fit-content);
+
+    svg {
+      @include size(24px);
+    }
   }
 
   &--default {

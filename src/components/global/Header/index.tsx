@@ -1,17 +1,33 @@
 import Input from '../Input';
+import Button from '../Button';
 import { ReactComponent as SearchIcon } from 'assets/vectors/search.svg';
 import { ReactComponent as NotificationIcon } from 'assets/vectors/notification.svg';
 import { ReactComponent as ArrowDownIcon } from 'assets/vectors/arrow-down.svg';
+import { ReactComponent as HamburgerIcon } from 'assets/vectors/hamburger.svg';
 import styles from './header.module.scss';
 
-const Header = () => {
+interface HeaderProps {
+  toggleSidebar: () => void;
+}
+
+const Header = ({ toggleSidebar }: HeaderProps) => {
   return (
     <header className={styles['header']}>
-      <Input
-        containerClass={styles['header__input']}
-        rightIcon={<SearchIcon />}
-        placeholder="Ask us any question"
-      />
+      <div>
+        <Button
+          iconButton
+          onClick={toggleSidebar}
+          className={styles['header__hamburger']}
+        >
+          <HamburgerIcon />
+        </Button>
+
+        <Input
+          containerClass={styles['header__input']}
+          rightIcon={<SearchIcon />}
+          placeholder="Ask us any question"
+        />
+      </div>
 
       <div className={styles['header__menu']}>
         <div className={styles['header__menu__section']}>

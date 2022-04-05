@@ -7,6 +7,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-weight: $font-weight--medium;
+  cursor: pointer;
 
   &__icon {
     svg {

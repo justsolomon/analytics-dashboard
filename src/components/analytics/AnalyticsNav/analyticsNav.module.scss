@@ -1,0 +1,15 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+.analytics-nav {
+  padding: 0 40px;
+  border-bottom: 1px solid $border-color;
+
+  @media #{$media-desktop--sm} {
+    padding: 0 20px;
+  }
+
+  @media #{$media-mobile--sm} {
+    padding: 0 16px;
+  }
+}
