@@ -9,7 +9,7 @@
   padding: 20px;
   background-color: $white;
   border-right: 1px solid $border-color;
-  z-index: 1;
+  z-index: 2;
 
   &__close-button {
     @include flex(row, center, flex-end);
@@ -27,8 +27,10 @@
     border-radius: $border-radius--md;
 
     h2 {
+      margin-bottom: 4px;
       color: $text-black;
       font-size: $font-size--sm;
+      font-weight: $font-weight--medium;
     }
 
     p {
