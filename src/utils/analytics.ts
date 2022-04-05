@@ -47,4 +47,14 @@ export const analyticsCharts: AnalyticsChart[] = [
     ],
     data: generateData('resolutions'),
   },
+  {
+    title: 'First contact resolution rate',
+    percentIncrease: 4.14,
+    color: '#07C9E2',
+    stats: [
+      { label: 'Average contact rate', value: '30 mins' },
+      { label: 'Response time', value: '1 hour 30 mins' },
+    ],
+    data: generateData('contacts'),
+  },
 ];
