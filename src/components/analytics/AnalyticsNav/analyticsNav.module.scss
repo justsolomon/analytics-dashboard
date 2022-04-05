@@ -2,14 +2,23 @@
 @import 'styles/mixins';
 
 .analytics-nav {
+  @include position(sticky, 80px);
+
   padding: 0 40px;
   border-bottom: 1px solid $border-color;
+  background-color: $white;
+  z-index: 1;
 
   @media #{$media-desktop--sm} {
     padding: 0 20px;
   }
 
+  @media #{$media-mobile} {
+    top: 70px;
+  }
+
   @media #{$media-mobile--sm} {
     padding: 0 16px;
+    top: 60px;
   }
 }

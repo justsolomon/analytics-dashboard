@@ -4,10 +4,13 @@
 .header {
   @include layout-main();
   @include flex(row, center, space-between);
+  @include position(sticky, 0);
 
   height: 80px;
   padding: 0 40px;
   border-bottom: 1px solid $border-color;
+  background-color: $white;
+  z-index: 1;
 
   > div:first-child {
     @include flex-center();
