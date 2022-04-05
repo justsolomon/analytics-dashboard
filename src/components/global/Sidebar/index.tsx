@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react';
 import Button from '../Button';
 import NavLinkMenu from './subcomponents/NavLinkMenu';
 import { ReactComponent as CloseIcon } from 'assets/vectors/close.svg';

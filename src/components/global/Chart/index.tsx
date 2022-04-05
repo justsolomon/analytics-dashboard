@@ -138,7 +138,7 @@ const Chart = (props: ChartProps): JSX.Element => {
     renderChart();
 
     return () => destroyChart();
-  }, [data]);
+  }, [data]); //eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <canvas aria-label="Chart Canvas" role="img" ref={canvas}>
