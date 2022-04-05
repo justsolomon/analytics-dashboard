@@ -1,0 +1,30 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.nav-link {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 16px 0;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover,
+  &--active {
+    color: $text-black;
+    font-weight: $font-weight--medium;
+  }
+
+  &--active {
+    border-bottom: 2px solid $purple;
+  }
+
+  @media #{$media-mobile} {
+    margin-right: 20px;
+  }
+
+  @media #{$media-mobile--sm} {
+    margin-right: 12px;
+    padding: 12px 0;
+    font-size: $font-size--sm;
+  }
+}

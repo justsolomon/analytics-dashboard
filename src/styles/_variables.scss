@@ -3,6 +3,7 @@
 $font-family: 'Gelion', sans-serif;
 $font-weight--normal: 400;
 $font-weight--medium: 500;
+$font-weight--semibold: 600;
 $font-weight--bold: 700;
 
 $font-size--xs: 12px;
@@ -20,9 +21,6 @@ $primary-color: #696d8c;
 $secondary-color: #a3a3c2;
 $error-color: #f25a68;
 $brand-color--primary: #25bb87;
-// "500": "#2AD59A",
-// "600": "#22AA7B",
-// "700": "#19805C",
 $brand-color--secondary: #22aa7b;
 $brand-color--tertiary: #19805c;
 $border-color: #ecebf5;
@@ -35,7 +33,10 @@ $border-radius--lg: 10px;
 
 /* Media query variables */
 $media-desktop: 'only screen and (max-width : 1200px)';
-$media-desktop-sm: 'only screen and (max-width : 1024px)';
+$media-desktop--sm: 'only screen and (max-width : 1024px)';
+$media-desktop--xs: 'only screen and (max-width : 950px)';
 $media-tablet: 'only screen and (max-width : 768px)';
 $media-mobile: 'only screen and (max-width : 600px)';
-$media-mobile-sm: 'only screen and (max-width : 480px)';
+$media-mobile--sm: 'only screen and (max-width : 480px)';
+$media-mobile--xs: 'only screen and (max-width : 370px)';
+$media-mobile--xxs: 'only screen and (max-width : 310px)';

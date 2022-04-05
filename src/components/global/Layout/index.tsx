@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
 import styles from './layout.module.scss';
@@ -7,10 +8,14 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
   return (
     <>
-      <Sidebar />
-      <Header />
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      <Header toggleSidebar={toggleSidebar} />
       <main className={styles['main-content']}>{children}</main>
     </>
   );

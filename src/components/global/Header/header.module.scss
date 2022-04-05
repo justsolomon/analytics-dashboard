@@ -9,6 +9,18 @@
   padding: 0 40px;
   border-bottom: 1px solid $border-color;
 
+  > div:first-child {
+    @include flex-center();
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+  }
+
   &__input {
     input {
       height: 54px;
@@ -73,6 +85,70 @@
       height: 24px;
       width: 1px;
       background-color: $border-color;
+    }
+  }
+
+  @media #{$media-desktop--sm} {
+    padding: 0 20px;
+
+    &__input {
+      input {
+        width: 400px;
+      }
+    }
+  }
+
+  @media #{$media-desktop--xs} {
+    &__hamburger {
+      display: block;
+    }
+  }
+
+  @media #{$media-tablet} {
+    &__input {
+      input {
+        width: 300px;
+      }
+    }
+  }
+
+  @media #{$media-mobile} {
+    height: 70px;
+
+    &__input {
+      input {
+        height: 45px;
+        width: 250px;
+      }
+
+      span {
+        top: 12.5px;
+      }
+    }
+
+    &__menu {
+      height: 45px;
+      width: 140px;
+      padding: 0 12px;
+
+      &__section {
+        &:last-child span {
+          @include size(24px);
+        }
+      }
+    }
+  }
+
+  @media #{$media-mobile--sm} {
+    height: 60px;
+    padding: 0 12px;
+
+    &__input {
+      display: none;
+    }
+
+    &__menu {
+      height: 40px;
     }
   }
 }
