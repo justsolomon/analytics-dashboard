@@ -30,10 +30,10 @@ const Chart = (props: ChartProps): JSX.Element => {
         caretSize: 10,
         padding: 10,
         titleColor: '#060213',
-        titleFont: { size: 18, weight: '700', family: "'Gelion', sans-serif" },
+        titleFont: { size: 18, weight: '700' },
         titleAlign: 'center',
         bodyColor: '#060213',
-        bodyFont: { size: 16, weight: '500', family: "'Gelion', sans-serif" },
+        bodyFont: { size: 16, weight: '500' },
         bodyAlign: 'center',
         displayColors: false,
         usePointStyle: true,
@@ -51,7 +51,7 @@ const Chart = (props: ChartProps): JSX.Element => {
           padding: 18,
           precision: 0,
           stepSize: 10,
-          font: { size: 14, family: "'Gelion', sans-serif" },
+          font: { size: 14 },
         },
       },
       x: {
@@ -64,7 +64,6 @@ const Chart = (props: ChartProps): JSX.Element => {
           padding: 14,
           font: {
             size: labelSize ? labelSize : 14,
-            family: "'Gelion', sans-serif",
           },
         },
       },
@@ -89,12 +88,6 @@ const Chart = (props: ChartProps): JSX.Element => {
   };
 
   const extendDatasets = () => {
-    // create custom gradient
-    const ctx = canvas.current?.getContext('2d');
-    const gradient = ctx?.createLinearGradient(500, 0, 90, 0);
-    gradient?.addColorStop(1, 'rgba(55, 81, 255, 0.15)');
-    gradient?.addColorStop(0, 'rgba(55, 81, 255, 0.02)');
-
     for (let i = 0; i < data.datasets.length; i++) {
       data.datasets[i] = {
         ...defaultDatasetProps,
@@ -112,7 +105,7 @@ const Chart = (props: ChartProps): JSX.Element => {
     extendDatasets();
 
     //set chart defaults
-    ChartComponent.defaults.font.family = 'DM Sans';
+    ChartComponent.defaults.font.family = "'Gelion', sans-serif";
 
     //set new chart instance in state
     setChart(
